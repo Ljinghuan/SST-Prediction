@@ -1,0 +1,70 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+.conda/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# === Data files (too large for Git) ===
+*.nc
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.csv
+*.parquet
+Temperature_predictor/data/
+
+# === Model checkpoints ===
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.joblib
+Temperature_predictor/experiments/
+
+# === Office temporary/lock files ===
+~$*
+~*.tmp
+*.tmp
+
+# === Documents (optional: uncomment if you want to track them) ===
+# Keep thesis docs out of code repo
+*.docx
+*.doc
+*.xlsx
+*.pptx
+*.pdf
+
+# === Obsidian vault config ===
+.obsidian/
+
+# === Literature PDFs ===
+Temperature_predictor/lit_1/pdfs/
+
+# === Images (generated figures) ===
+# Uncomment below if you don't want to track figures
+# *.png
+
+# === OS files ===
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# === IDE ===
+.vscode/
+.idea/
+*.swp
+*.swo

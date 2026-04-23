@@ -13,6 +13,7 @@ venv/
 env/
 .venv/
 .conda/
+Gradu-Design/
 
 # Jupyter
 .ipynb_checkpoints/

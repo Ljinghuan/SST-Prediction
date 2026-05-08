@@ -69,3 +69,9 @@ Desktop.ini
 .idea/
 *.swp
 *.swo
+
+# === Thesis private materials (signatures, student ID, etc.) ===
+thesis/forms/
+
+# === LaTeX thesis (kept locally, not tracked in git) ===
+thesis_latex/

@@ -1,0 +1,34 @@
+model params: 792,430
+epoch   1  train_L1=0.6937  val_RMSE_mean=0.7771  *  patience=0/15
+epoch   2  train_L1=0.4901  val_RMSE_mean=0.6955  *  patience=0/15
+epoch   3  train_L1=0.4811  val_RMSE_mean=0.6908  *  patience=0/15
+epoch   4  train_L1=0.4762  val_RMSE_mean=0.6884  *  patience=0/15
+epoch   5  train_L1=0.4725  val_RMSE_mean=0.6842  *  patience=0/15
+epoch   6  train_L1=0.4696  val_RMSE_mean=0.6875     patience=1/15
+epoch   7  train_L1=0.4669  val_RMSE_mean=0.6807  *  patience=0/15
+epoch   8  train_L1=0.4631  val_RMSE_mean=0.6820     patience=1/15
+epoch   9  train_L1=0.4596  val_RMSE_mean=0.6824     patience=2/15
+epoch  10  train_L1=0.4557  val_RMSE_mean=0.6866     patience=3/15
+epoch  11  train_L1=0.4526  val_RMSE_mean=0.6938     patience=4/15
+epoch  12  train_L1=0.4492  val_RMSE_mean=0.7034     patience=5/15
+epoch  13  train_L1=0.4452  val_RMSE_mean=0.7230     patience=6/15
+epoch  14  train_L1=0.4418  val_RMSE_mean=0.7133     patience=7/15
+epoch  15  train_L1=0.4388  val_RMSE_mean=0.7150     patience=8/15
+epoch  16  train_L1=0.4353  val_RMSE_mean=0.7043     patience=9/15
+epoch  17  train_L1=0.4327  val_RMSE_mean=0.7235     patience=10/15
+epoch  18  train_L1=0.4299  val_RMSE_mean=0.7256     patience=11/15
+epoch  19  train_L1=0.4270  val_RMSE_mean=0.7299     patience=12/15
+epoch  20  train_L1=0.4245  val_RMSE_mean=0.7153     patience=13/15
+epoch  21  train_L1=0.4215  val_RMSE_mean=0.7247     patience=14/15
+epoch  22  train_L1=0.4189  val_RMSE_mean=0.7416     patience=15/15
+early stop at epoch 22
+training finished in 2193.5s, best val RMSE = 0.6807
+
+[AGCRN] test set
+lead(d)       1        7       14       30
+rmse     0.3385   0.6119   0.7287   0.8269
+mae      0.2387   0.4470   0.5398   0.6204
+pearson  0.7230   0.1112  -0.0922  -0.0328
+ssim     0.7472   0.4477   0.3261   0.2287
+
+results under: /output/Graduate-Design/Temperature_predictor/experiments/agcrn

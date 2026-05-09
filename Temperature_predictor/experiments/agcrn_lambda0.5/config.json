@@ -1,0 +1,30 @@
+{
+  "data_dir": "/output/Graduate-Design/Temperature_predictor/data/processed",
+  "graph_dir": "/output/Graduate-Design/Temperature_predictor/data/processed/graph",
+  "exp_dir": "/output/Graduate-Design/Temperature_predictor/experiments",
+  "T_in": 30,
+  "T_out": 30,
+  "embed_dim": 10,
+  "adapt_dim": 10,
+  "hidden_dim": 64,
+  "num_layers": 2,
+  "cheb_k": 2,
+  "lambda_fuse": 0.5,
+  "batch_size": 32,
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "epochs": 100,
+  "patience": 15,
+  "grad_clip": 5.0,
+  "num_workers": 0,
+  "seed": 42,
+  "use_amp": true,
+  "use_checkpoint": true,
+  "lead_days": [
+    1,
+    7,
+    14,
+    30
+  ],
+  "device": "cuda"
+}

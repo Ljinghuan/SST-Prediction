@@ -1,0 +1,37 @@
+model params: 792,430
+epoch   1  train_L1=0.6719  val_RMSE_mean=0.7435  *  patience=0/15
+epoch   2  train_L1=0.4873  val_RMSE_mean=0.6996  *  patience=0/15
+epoch   3  train_L1=0.4817  val_RMSE_mean=0.6952  *  patience=0/15
+epoch   4  train_L1=0.4775  val_RMSE_mean=0.6892  *  patience=0/15
+epoch   5  train_L1=0.4742  val_RMSE_mean=0.6824  *  patience=0/15
+epoch   6  train_L1=0.4715  val_RMSE_mean=0.6880     patience=1/15
+epoch   7  train_L1=0.4695  val_RMSE_mean=0.6778  *  patience=0/15
+epoch   8  train_L1=0.4657  val_RMSE_mean=0.6760  *  patience=0/15
+epoch   9  train_L1=0.4617  val_RMSE_mean=0.6719  *  patience=0/15
+epoch  10  train_L1=0.4578  val_RMSE_mean=0.6668  *  patience=0/15
+epoch  11  train_L1=0.4543  val_RMSE_mean=0.6691     patience=1/15
+epoch  12  train_L1=0.4518  val_RMSE_mean=0.6671     patience=2/15
+epoch  13  train_L1=0.4489  val_RMSE_mean=0.6687     patience=3/15
+epoch  14  train_L1=0.4464  val_RMSE_mean=0.6723     patience=4/15
+epoch  15  train_L1=0.4437  val_RMSE_mean=0.6725     patience=5/15
+epoch  16  train_L1=0.4414  val_RMSE_mean=0.6735     patience=6/15
+epoch  17  train_L1=0.4383  val_RMSE_mean=0.6985     patience=7/15
+epoch  18  train_L1=0.4356  val_RMSE_mean=0.6988     patience=8/15
+epoch  19  train_L1=0.4324  val_RMSE_mean=0.7056     patience=9/15
+epoch  20  train_L1=0.4305  val_RMSE_mean=0.7189     patience=10/15
+epoch  21  train_L1=0.4277  val_RMSE_mean=0.7131     patience=11/15
+epoch  22  train_L1=0.4255  val_RMSE_mean=0.7112     patience=12/15
+epoch  23  train_L1=0.4232  val_RMSE_mean=0.7105     patience=13/15
+epoch  24  train_L1=0.4216  val_RMSE_mean=0.7151     patience=14/15
+epoch  25  train_L1=0.4194  val_RMSE_mean=0.7321     patience=15/15
+early stop at epoch 25
+training finished in 2490.2s, best val RMSE = 0.6668
+
+[AGCRN] test set
+lead(d)       1        7       14       30
+rmse     0.2383   0.5833   0.7122   0.8115
+mae      0.1686   0.4254   0.5266   0.6072
+pearson  0.8520   0.1590  -0.0802  -0.0242
+ssim     0.8484   0.4682   0.3371   0.2387
+
+results under: /output/Graduate-Design/Temperature_predictor/experiments/agcrn

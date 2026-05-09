@@ -59,7 +59,7 @@ def train_model(
 
     # AMP：仅在 CUDA 上启用；CPU 时即使 cfg.use_amp=True 也退化为常规精度
     use_amp = bool(getattr(cfg, 'use_amp', False)) and device.startswith('cuda')
-    scaler = torch.cuda.amp.GradScaler(enabled=use_amp)
+    scaler = torch.amp.GradScaler('cuda', enabled=use_amp)
 
     history = {'train_loss': [], 'val_loss': [], 'val_rmse_mean': []}
     best_val = float('inf')
@@ -74,7 +74,7 @@ def train_model(
             x = x.to(device, non_blocking=True)
             y = y.to(device, non_blocking=True)
             optimizer.zero_grad(set_to_none=True)
-            with torch.cuda.amp.autocast(enabled=use_amp):
+            with torch.amp.autocast('cuda', enabled=use_amp):
                 y_hat = model(x)
                 loss = loss_fn(y_hat, y)
             if use_amp:
@@ -132,6 +132,6 @@ def train_model(
         json.dump(cfg.to_dict(), f, indent=2, ensure_ascii=False)
 
     # 加载最佳权重
-    state = torch.load(save_dir / 'best.pt', map_location=device)
+    state = torch.load(save_dir / 'best.pt', map_location=device, weights_only=True)
     model.load_state_dict(state)
     return {'history': history, 'best_val_rmse': best_val, 'elapsed': elapsed}

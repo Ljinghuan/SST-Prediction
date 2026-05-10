@@ -75,3 +75,7 @@ thesis/forms/
 
 # === LaTeX thesis (kept locally, not tracked in git) ===
 thesis_latex/
+
+# Large data archives
+Temperature_predictor/data_processed.zip
+*.zip

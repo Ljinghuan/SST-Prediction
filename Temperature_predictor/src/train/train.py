@@ -99,9 +99,12 @@ def train_model(
             compute_ssim=False,
         )
         val_rmse_mean = float(val_metrics['rmse'].mean())
+        # MAE 在所有 lead 上的均值即等价于验证集 L1 loss（与训练损失同度量）
+        val_loss_mean = float(val_metrics['mae'].mean())
         # 使用 RMSE 均值作为 early stop 准则（与论文主表一致）
 
         history['train_loss'].append(train_loss)
+        history['val_loss'].append(val_loss_mean)
         history['val_rmse_mean'].append(val_rmse_mean)
 
         improved = val_rmse_mean < best_val - 1e-6
@@ -113,6 +116,7 @@ def train_model(
             patience_cnt += 1
 
         msg = (f'epoch {epoch:3d}  train_L1={train_loss:.4f}  '
+               f'val_L1={val_loss_mean:.4f}  '
                f'val_RMSE_mean={val_rmse_mean:.4f}  '
                f'{"*" if improved else " "}  '
                f'patience={patience_cnt}/{cfg.patience}')
